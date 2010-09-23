@@ -36,15 +36,15 @@ run the following command from the project root:
     script/nailgun
 
 Here are helpful commands
- *   \rt - run tests in the given namespace
- *   \lw - lookup word
- *   \li - lookup interactive
- *   \gw - goto word
- *   \sw - source lookup word
- *   \el - eval line
- *   \ep - eval paragraph
- *   \me - macro expand
- *   \m1 - macro expand1
+*   \rt - run tests in the given namespace
+*   \lw - lookup word
+*   \li - lookup interactive
+*   \gw - goto word
+*   \sw - source lookup word
+*   \el - eval line
+*   \ep - eval paragraph
+*   \me - macro expand
+*   \m1 - macro expand1
 
 
 
