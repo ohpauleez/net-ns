@@ -1,0 +1,11 @@
+new -s net-ns -nnailgun;
+splitw -v -p 40;
+neww -t 2 -nlein;
+splitw -v -p 20;
+neww -t 3 -nvim;
+splitw -h;
+splitw -v;
+neww -d -t 4 -nscratch;
+selectw -t 1;
+selectp -t 0;
+
