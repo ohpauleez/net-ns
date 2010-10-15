@@ -1,4 +1,4 @@
-(ns net-ns.test
+(ns net-ns.test.net-ns
   (:use [net-ns] :reload)
   (:use [clojure.test]))
 
