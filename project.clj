@@ -6,10 +6,12 @@
             :distribution :repo
             :comments "See the notice in README.md or details in LICENSE.html"}
   :dependencies [[org.clojure/clojure "1.3.0-master-SNAPSHOT"]
+                 ;[org.clojure/clojure "1.3.0-alpha1"]
                  [aleph "0.1.1-SNAPSHOT"]]
-  :dev-dependencies [[swank-clojure "1.3.0-SNAPSHOT"]
-                     [vimclojure/server "2.2.0-SNAPSHOT"]
-                     ;[lein-difftest "1.2.3"]
+  :dev-dependencies [[vimclojure/server "2.2.0-SNAPSHOT"]
+                     ;[lein-difftest "1.3.1"]
+                     ;[swank-clojure "1.3.0-SNAPSHOT"]
+                     [org.clojars.ninjudd/lazytest "1.1.3-SNAPSHOT"]
                      [org.clojure.contrib/repl-utils "1.3.0-SNAPSHOT"]]
                      ;[lein-run "1.0.0-SNAPSHOT"]
                      ;[radagast "1.0.0"]

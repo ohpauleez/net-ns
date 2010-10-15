@@ -47,14 +47,23 @@ run the following command from the project root:
 
 Here are helpful commands
     * \rt - run tests in the given namespace
-	* \lw - lookup word
-	* \li - lookup interactive
-	* \gw - goto word
-	* \sw - source lookup word
-	* \el - eval line
-	* \ep - eval paragraph
-	* \me - macro expand
-	* \m1 - macro expand1
+    * \lw - lookup word
+    * \li - lookup interactive
+    * \gw - goto word
+    * \sw - source lookup word
+    * \el - eval line
+    * \ep - eval paragraph
+    * \me - macro expand
+    * \m1 - macro expand1
+
+### Paredit.vim tips
+
+I also make use of the paredit.vim file from the slimv.vim plugin.
+    * :call ToggleParedit - toggle it on and off.
+    * \W wrap in paren (works with visual selection too)
+    * \J join paren - (a)(b) -> (a b)
+    * \O split paren - (a b) -> (a)(b)
+    * \S splice paren - ((a b)) -> (a b)
 
 
 
