@@ -1,6 +1,5 @@
 (ns net-ns.test.server.async
-  (:require [net-ns.server.async :as async] :reload
-            [lazytest.runner.console :as ltr])
+  (:require [net-ns.server.async :as async] :reload)
   (:use  [clojure.test :only (deftest is)]
          [lazytest.describe :only (describe it testing)]))
 
