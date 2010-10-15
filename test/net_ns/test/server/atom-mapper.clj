@@ -1,10 +1,8 @@
-(ns net-ns.test.server.simple-mapper
-  (:require [net-ns.server.simple-mapper :as simple-mapper] :reload)
+(ns net-ns.test.server.atom-mapper
+  (:require [net-ns.server.atom-mapper :as atom-mapper] :reload)
   (:use  [clojure.test :only (deftest is)]
          [lazytest.describe :only (describe it testing)]))
 
-(deftest replace-mesimple ;; FIXME: write
-  (is false "No tests have been written."))
 
 (describe "Registering clients"
   (testing "with no existing function sets")
