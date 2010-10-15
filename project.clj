@@ -13,7 +13,8 @@
                      ;[swank-clojure "1.3.0-SNAPSHOT"]
                      [org.clojars.ninjudd/lazytest "1.1.3-SNAPSHOT"]
                      ;[org.clojure.contrib/repl-utils "1.3.0-SNAPSHOT"]
-                     [org.clojure.contrib/repl-utils "1.3.0-alpha1"]]
+                     [org.clojure.contrib/repl-utils "1.3.0-alpha1"]
+                     [org.clojure.contrib/core "1.3.0-alpha1"]]
                      ;[lein-run "1.0.0-SNAPSHOT"]
                      ;[radagast "1.0.0"]
   ;:warn-on-reflection true
