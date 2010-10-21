@@ -10,7 +10,7 @@
       ([client-map host]
        (assoc client-map host #{}))
       ([client-map host init-set]
-       (if (isa? (class init-set) clojure.lang.PersistentHashSet)
+       (if (instance? clojure.lang.PersistentHashSet init-set)
          (assoc client-map host init-set)
          (register-client client-map host))))
 
