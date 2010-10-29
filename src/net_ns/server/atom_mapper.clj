@@ -27,5 +27,9 @@
 
     (unregister-fn
       [client-map f host]
-      (swap! client-map dissoc-in [host f])))
+      (swap! client-map dissoc-in [host f]))
+
+    (get-fn
+      ([client-map f])
+      ([client-map f host])))
 

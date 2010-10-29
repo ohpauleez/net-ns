@@ -26,3 +26,9 @@
   (testing "when the client is registered, but has no registered functions")
   (testing "when the client is not registered"))
 
+(describe "Getting functions"
+  (testing "when the client is registered, has registered functions including the one targeted for removal")
+  (testing "when the client is registered, has registered functions, but not the target function")
+  (testing "when the client is registered, but has no registered functions")
+  (testing "when the client is not registered"))
+

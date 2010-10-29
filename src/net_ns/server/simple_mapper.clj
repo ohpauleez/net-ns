@@ -27,5 +27,9 @@
 
     (unregister-fn
       [client-map f host]
-      (dissoc-in client-map [host f])))
+      (dissoc-in client-map [host f]))
+
+    (get-fn
+      ([client-map f])
+      ([client-map f host])))
 

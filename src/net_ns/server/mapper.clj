@@ -44,5 +44,14 @@
       Returns:
         the map with the client removed
       Notes:
-        When using concurrent/mutative types, M IS MODIFIED"))
+        When using concurrent/mutative types, M IS MODIFIED")
+  (get-fn [m str-f] [m str-f host]
+    "Get the first matching function,
+      or the function from a given host
+      Arguments:
+        m - a map, anything that supports APersistentMap (or a concurrent/mutative wrapped map)
+        str-f - a string, the name of the function to register
+        host - a string, the hostname of the client
+      Returns:
+        the str-f if found, nil otherwise"))
 
