@@ -1,8 +1,35 @@
 (ns ns-net.server.atom-mapper
-  (:require [net-ns.server.mapper :as mapper])
+  (:require [net-ns.server.mapper :as mapper]
+            [net-ns.server.simple-mapper :as sim-mapper])
   (:use [clojure.contrib.core :only (dissoc-in)]))
 
-(declare register-client)
+(extend-type clojure.lang.Atom
+  mapper/Mapper
+    (register-client
+      ([client-map host]
+        (swap! client-map sim-mapper/register-client host)
+      ([client-map host init-set]
+        (swap! client-map sim-mapper/register-client host init-set))))
+    
+    (register-fn
+      [client-map f host]
+      (swap! client-map sim-mapper/register-fn f host))
+  
+    (unregister-client
+      [client-map host]
+      (swap! client-map sim-mapper/unregister-client host))
+  
+    (unregister-fn
+      [client-map f host]
+      (swap! client-map sim-mapper/unregister-fn f host))
+  
+    (get-fn
+      ([client-map f]
+        (sim-mapper/get-fn @client-map f))
+      ([client-map f host]
+        (sim-mapper/get-fn @client-map f host))))
+
+(comment (declare register-client)
 
 (extend-type clojure.lang.Atom
   mapper/Mapper
@@ -31,5 +58,5 @@
 
     (get-fn
       ([client-map f])
-      ([client-map f host])))
+      ([client-map f host]))) )
 

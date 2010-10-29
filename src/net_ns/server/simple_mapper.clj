@@ -8,12 +8,12 @@
   mapper/Mapper
     (register-client
       ([client-map host]
-       (assoc client-map host #{}))
+        (assoc client-map host #{}))
       ([client-map host init-set]
-       (if (some #(instance? % init-set) [clojure.lang.PersistentHashSet
-                                          clojure.lang.PersistentArrayMap])
-         (assoc client-map host init-set)
-         (register-client client-map host))))
+        (if (some #(instance? % init-set) [clojure.lang.PersistentHashSet
+                                           clojure.lang.PersistentArrayMap])
+          (assoc client-map host init-set)
+          (register-client client-map host))))
 
     (register-fn
       [client-map f host]
@@ -32,7 +32,7 @@
 
     (get-fn
       ([client-map f]
-       (some #(get-in client-map [% f]) (keys client-map)))
+        (some #(get-in client-map [% f]) (keys client-map)))
       ([client-map f host]
-       (get-in client-map [host f]))))
+        (get-in client-map [host f]))))
 
