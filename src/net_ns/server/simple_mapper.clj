@@ -10,7 +10,8 @@
       ([client-map host]
        (assoc client-map host #{}))
       ([client-map host init-set]
-       (if (instance? clojure.lang.PersistentHashSet init-set)
+       (if (some #(instance? % init-set) [clojure.lang.PersistentHashSet
+                                          clojure.lang.PersistentArrayMap])
          (assoc client-map host init-set)
          (register-client client-map host))))
 
@@ -30,6 +31,8 @@
       (dissoc-in client-map [host f]))
 
     (get-fn
-      ([client-map f])
-      ([client-map f host])))
+      ([client-map f]
+       (some #(get-in client-map [% f]) (keys client-map)))
+      ([client-map f host]
+       (get-in client-map [host f]))))
 
